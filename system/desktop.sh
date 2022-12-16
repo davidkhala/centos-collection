@@ -8,6 +8,7 @@ install() {
 
 post-install(){
     # shared with RHEL
-    ln -sf /lib/systemd/system/runlevel5.target /etc/systemd/system/default.target
+    sudo ln -sf /lib/systemd/system/runlevel5.target /etc/systemd/system/default.target
     sudo systemctl set-default graphical.target
 }
+$@
