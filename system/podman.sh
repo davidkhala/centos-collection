@@ -1,4 +1,5 @@
 install() {
+  # Not for fedora
   sudo dnf install -y @container-tools
 }
 asDocker() {
