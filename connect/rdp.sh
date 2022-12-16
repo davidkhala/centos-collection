@@ -1,6 +1,6 @@
 install() {
 
-    sudo dnf install -y tigervnc-Server firewalld
+    sudo dnf install -y tigervnc-server firewalld
        
     echo "Prerequisite: xrdp package is available on EPEL repository."
 
