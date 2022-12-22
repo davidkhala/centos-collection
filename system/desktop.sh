@@ -5,6 +5,10 @@ install() {
     centos-install
     post-install    
 }
+install-pinyin() {
+    sudo dnf install -y ibus-libpinyin
+    reboot
+}
 
 post-install(){
     # shared with RHEL
