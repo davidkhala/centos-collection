@@ -12,5 +12,10 @@ EOM
 
     sudo dnf install -y google-cloud-cli
 }
-
+snap-install() {
+    # error: This revision of snap "google-cloud-sdk" was published using classic confinement and thus
+    #    may perform arbitrary system changes outside of the security sandbox that snaps are usually
+    #    confined to, which may put your system at risk.
+    sudo snap install google-cloud-sdk --classic
+}
 $@
