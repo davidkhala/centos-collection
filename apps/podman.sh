@@ -9,7 +9,10 @@ asDocker() {
 start() {
   systemctl --user enable --now podman.socket
 }
+install-desktop(){
+  flatpak install -y flathub io.podman_desktop.PodmanDesktop
 
+}
 socket() {
   
   echo /run/user/${UID}/podman/podman.sock
