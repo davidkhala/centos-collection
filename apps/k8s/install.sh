@@ -1,4 +1,4 @@
-add-repo(){
+add-repo() {
   cat <<EOF | sudo tee /etc/yum.repos.d/kubernetes.repo
 [kubernetes]
 name=Kubernetes
@@ -10,8 +10,9 @@ exclude=kubelet kubeadm kubectl cri-tools kubernetes-cni
 EOF
 
 }
-kube3(){
+kube3() {
   sudo yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes
   sudo systemctl enable --now kubelet
 
 }
+$@
