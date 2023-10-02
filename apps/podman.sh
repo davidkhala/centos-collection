@@ -12,7 +12,6 @@ start() {
 desktop-preinstall(){
   # To resolve issue https://github.com/flatpak/flatpak/issues/4724
   sudo flatpak remote-add --if-not-exists --system flathub https://flathub.org/repo/flathub.flatpakrepo
-
 }
 socket() {
   
