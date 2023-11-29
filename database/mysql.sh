@@ -1,4 +1,4 @@
-client() {
+install() {
 
   sudo dnf install -y mysql
 }
@@ -6,13 +6,13 @@ firewall() {
   sudo firewall-cmd --add-service=mysql --permanent
   sudo firewall-cmd --reload
 }
-server() {
+install-server() {
   sudo dnf install -y mysql-server
 }
-router() {
+install-router() {
   sudo dnf -y install mysql-router-community
 }
-Shell() {
+install-shell() {
   sudo dnf install -y mysql-shell
 }
 gpg-fix() {
