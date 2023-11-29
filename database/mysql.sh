@@ -8,6 +8,7 @@ firewall() {
 }
 install-server() {
   sudo dnf install -y mysql-server
+  firewall
 }
 install-router() {
   sudo dnf -y install mysql-router-community
