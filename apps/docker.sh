@@ -8,6 +8,6 @@ install-compose(){
   sudo yum install -y yum-utils
   sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
   sudo yum update
-  sudo yum install docker-compose-plugin
+  sudo yum install -y docker-compose-plugin
 }
 $@
