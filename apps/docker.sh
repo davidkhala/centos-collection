@@ -5,9 +5,15 @@ install-rootless(){
 
 }
 install-compose(){
-  sudo yum install -y yum-utils
-  sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+  add-distro-repository
   sudo yum update
   sudo yum install -y docker-compose-plugin
+}
+add-distro-repository() {
+  sudo yum install -y yum-utils
+  sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+}
+remove-distro-repository(){
+  sudo rm /etc/yum.repos.d/docker-ce.repo
 }
 $@
