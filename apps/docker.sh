@@ -1,13 +1,12 @@
 
 install-rootless(){
   sudo modprobe ip_tables
-  curl https://raw.githubusercontent.com/davidkhala/linux-utils/main/apps/docker.sh | bash -s install-rootless
+  curl https://raw.githubusercontent.com/davidkhala/linux-utils/main/apps/docker/install.sh | bash -s install-rootless
 
 }
 install-compose(){
   add-distro-repository
-  sudo yum update
-  sudo yum install -y docker-compose-plugin
+  curl https://raw.githubusercontent.com/davidkhala/docker-manager/master/docker-compose/install.sh | bash -s RPM
 }
 add-distro-repository() {
   sudo yum install -y yum-utils
