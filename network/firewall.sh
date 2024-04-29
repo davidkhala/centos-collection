@@ -10,6 +10,10 @@ add-service() {
     sudo firewall-cmd --permanent --add-service=$1
     reload
 }
+allow-all() {
+    sudo firewall-cmd --permanent --set-target ACCEPT
+    reload
+}
 reload() {
     sudo firewall-cmd --reload
 }
