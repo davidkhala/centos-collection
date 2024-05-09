@@ -1,6 +1,6 @@
 common() {
-  sudo passwd $USER # interactive
   curl https://raw.githubusercontent.com/davidkhala/centos-collection/main/network/firewall.sh | bash -s allow-all
+  echo -e "$1" | sudo passwd $USER
 }
 special(){
   # only required for centos:stream
