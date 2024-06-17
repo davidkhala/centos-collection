@@ -6,4 +6,7 @@ install() {
   curl https://raw.githubusercontent.com/davidkhala/linux-utils/main/database/mariaDB.sh | bash -s post-install
 
 }
+install-client(){
+  sudo dnf install -y mariadb
+}
 $@
