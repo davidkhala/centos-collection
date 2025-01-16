@@ -12,10 +12,16 @@ EOM
 
     sudo dnf install -y google-cloud-cli
 }
+install-gke-plugin() {
+  # `gke-gcloud-auth-plugin`, which is needed for continued use of kubectl, was not found or is not executable.
+  # https://cloud.google.com/blog/products/containers-kubernetes/kubectl-auth-changes-in-gke
+  sudo yum install -y google-cloud-cli-gke-gcloud-auth-plugin
+
+}
 snap-install() {
     # error: This revision of snap "google-cloud-sdk" was published using classic confinement and thus
     #    may perform arbitrary system changes outside of the security sandbox that snaps are usually
     #    confined to, which may put your system at risk.
     sudo snap install google-cloud-sdk --classic
 }
-$@
+"$@"
