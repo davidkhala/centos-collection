@@ -6,4 +6,7 @@ install2() {
   rm get-pip.py
 
 }
+install3() {
+  sudo dnf install python3.13 -y 
+}
 $@
