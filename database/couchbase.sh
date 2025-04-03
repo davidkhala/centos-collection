@@ -4,6 +4,7 @@ install-edge-server(){
   sudo dnf install -y couchbase-edge-server-1.0.0.x86_64.rpm
   rm couchbase-edge-server-1.0.0.x86_64.rpm
   /opt/couchbase-edge-server/bin/couchbase-edge-server --version
+  echo "default configured to /opt/couchbase-edge-server/etc/config.json"
 }
 
 $@
