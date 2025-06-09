@@ -3,7 +3,7 @@ register() {
     # https://docs.confluent.io/platform/current/installation/installing_cp/rhel-centos.html#get-the-software
     sudo yum install -y curl which
     sudo rpm --import https://packages.confluent.io/rpm/7.9/archive.key
-    wget -P /etc/yum.repos.d/ https://raw.githubusercontent.com/davidkhala/centos-collection/refs/heads/main/mq/confluent/confluent.repo
+    sudo wget -P /etc/yum.repos.d/ https://raw.githubusercontent.com/davidkhala/centos-collection/refs/heads/main/mq/confluent/confluent.repo
     sudo yum clean all
 
 }
